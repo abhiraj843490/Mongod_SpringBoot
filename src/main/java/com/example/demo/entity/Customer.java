@@ -1,9 +1,11 @@
 package com.example.demo.entity;
 
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collation = "customers")
 public class Customer {
+    @Id
     private int id;
     private String fName;
     private String lName;
