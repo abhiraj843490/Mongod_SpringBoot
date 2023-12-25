@@ -1,5 +1,6 @@
 package com.example.demo.entity;
 
+import com.mongodb.lang.NonNull;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -7,8 +8,11 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Customer {
     @Id
     private int id;
+    @NonNull
     private String fName;
+    @NonNull
     private String lName;
+    @NonNull
     private String email;
 
     public int getId() {
